@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+   mavenCentral()
+}
+
+project.sourceCompatibility = '1.8'
+project.archivesBaseName = 'java-time-extension'
+project.version = '0'
+
+
+dependencies {
+   compile 'org.slf4j:slf4j-api:1.7.18'
+   compile 'com.mitchellbosecke:pebble:2.0.0'
+   
+   testCompile 'junit:junit:4.12'
+}
+
+
+
+// Gradle wrapper task
+// Only used when in need to reinstall the wrapper
+task wrapper(type: Wrapper) {
+   gradleVersion = '2.11'
+}
